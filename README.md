@@ -1,1 +1,1 @@
-# Circuit-for-controlling-soil-moisture-level-for-plants-in-CAD
+This project presents a smart irrigation system designed to automate watering based on real-time soil moisture levels. Using resistive moisture sensors, operational amplifiers (OpAmps), and a relay modeled as a resistor, the system intelligently activates a water pump when the soil becomes too dry and deactivates it once the desired humidity is reached.
