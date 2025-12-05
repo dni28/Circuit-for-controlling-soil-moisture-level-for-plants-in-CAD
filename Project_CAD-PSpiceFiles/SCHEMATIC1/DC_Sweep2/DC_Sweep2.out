@@ -1,0 +1,189 @@
+
+**** 05/23/25 21:55:33 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Sweep2"  [ C:\Users\salaj\Desktop\Proiect_CAD\Project_CAD-PSpiceFiles\SCHEMATIC1\DC_Sweep2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC_Sweep2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence_Orcad\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM rvar 600k 60k -1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT_CAD
+R_R9         OUT_HYSTERESIS N04930  1k TC=0,0 
+X_U3         N04558 N04778 15V 0 OUT_SENZOR AD822/AD
+R_R6         N04620 OUT_HYSTERESIS  10K TC=0,0 
+V_V1         15V 0 15
+R_R8         15V N04620  10.7K TC=0,0 
+R_R5         OUT_SENZOR N04994  1k TC=0,0 
+X_U4         N04620 N04994 15V 0 OUT_HYSTERESIS AD822/AD
+Q_Q1         15V N04930 N05000 Q2N2222A/ZTX 
+R_R3         OUT_SENZOR N04778  12.4k TC=0,0 
+R_R11         N05000 N05112  820 TC=0,0 
+X_D1         N05112 0 LED PARAMS: IS=3.7602e-29 RS=2  BV=5 IBV=10e-6         
+R_R10         N05000 0  1.2k TC=0,0 
+R_R4         N04778 0  10k TC=0,0 
+R_R7         N04620 0  7.68K TC=0,0 
+R_R1         N04558 15V  953k TC=0,0 
+R_R2         0 N04558  {rvar} TC=0,0 
+.PARAM  rvar=330k
+
+**** RESUMING DC_Sweep2.cir ****
+.END
+
+**** 05/23/25 21:55:33 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Sweep2"  [ C:\Users\salaj\Desktop\Proiect_CAD\Project_CAD-PSpiceFiles\SCHEMATIC1\DC_Sweep2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         X_U4.DX         X_D1.model201   
+          IS    1.000000E-15    1.000000E-15   37.602000E-30 
+           N                                    2            
+          BV                                    5            
+         IBV                                   10.000000E-06 
+          RS                                    2            
+
+
+**** 05/23/25 21:55:33 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Sweep2"  [ C:\Users\salaj\Desktop\Proiect_CAD\Project_CAD-PSpiceFiles\SCHEMATIC1\DC_Sweep2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222A/ZTX    X_U3.NPN        X_U3.PNP        X_U4.NPN        
+               NPN             NPN             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS   30.611000E-15  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  220             120             120             120            
+          NF    1.00124         1               1               1            
+         VAF  104             150             150             150            
+         IKF     .52                                                         
+         ISE    7.500000E-15                                                 
+          NE    1.41                                                         
+          BR    4               1               1               1            
+          NR    1.005           1               1               1            
+         VAR   28              15              15              15            
+         IKR     .24                                                         
+         ISC   10.652500E-12                                                 
+          NC    1.3728                                                       
+         ISS    0               0               0               0            
+          RB     .13            2.000000E+03    2.000000E+03    2.000000E+03 
+          RE     .22            4               4               4            
+          RC     .12          200             900             200            
+         CJE   27.010000E-12    0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    9.120000E-12    0               0               0            
+         VJC     .4089           .75             .75             .75         
+         MJC     .3508           .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  325.000000E-12                                                 
+          TR  100.000000E-09                                                 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.42         
+           D     .87             .87             .52             .87         
+
+
+               X_U4.PNP        
+               PNP             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  120            
+          NF    1            
+         VAF  150            
+          BR    1            
+          NR    1            
+         VAR   15            
+         ISS    0            
+          RB    2.000000E+03 
+          RE    4            
+          RC  900            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 05/23/25 21:55:33 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Sweep2"  [ C:\Users\salaj\Desktop\Proiect_CAD\Project_CAD-PSpiceFiles\SCHEMATIC1\DC_Sweep2.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JX         X_U4.JX         
+               NJF             NJF             
+         VTO   -2              -2            
+        BETA  767.000000E-06  767.000000E-06 
+          IS    1.000000E-12    1.000000E-12 
+
+
+
+          JOB CONCLUDED
+
+**** 05/23/25 21:55:33 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Sweep2"  [ C:\Users\salaj\Desktop\Proiect_CAD\Project_CAD-PSpiceFiles\SCHEMATIC1\DC_Sweep2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+
